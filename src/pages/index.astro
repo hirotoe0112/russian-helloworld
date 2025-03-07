@@ -1,0 +1,27 @@
+---
+import Layout from "../layouts/Layout.astro";
+import { getCollection } from "astro:content";
+
+type Journal = {
+  data: {
+    slug: string
+    title: string
+  }
+}
+
+const journals: Journal[] = await getCollection("journals");
+---
+
+<Layout>
+	<ul class="posts">
+    {
+      journals.map((post) => (
+		<li>
+          <p class="title">
+            <a href={`/journals/${post.data.slug}/`}>{post.data.title}</a>
+          </p>
+		</li>
+      ))
+    }
+  </ul>
+</Layout>
