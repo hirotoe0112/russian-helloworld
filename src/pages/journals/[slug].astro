@@ -1,24 +1,27 @@
 ---
 import Layout from "../../layouts/Layout.astro";
-import { getCollection } from "astro:content";
+import { getCollection, getEntry, render } from "astro:content";
 
 type Journal = {
   data: {
     slug: string
   }
-  body: string
+  collection: string
 }
 
 export async function getStaticPaths() {
   const journals: Journal[] = await getCollection("journals");
   return journals.map((post) => ({
     params: { slug: post.data.slug },
-    props: { body: post.body },
+    props: { collection: post.collection }
   }));
 }
 
-const { body } = Astro.props;
+const { slug } = Astro.params;
+const { collection } = Astro.props;
+const entry = await getEntry(collection, slug);
+const { Content } = await render(entry);
 ---
 <Layout>
-    {body}
+  <Content />
 </Layout>
