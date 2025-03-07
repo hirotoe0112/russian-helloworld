@@ -2,21 +2,102 @@
 <html lang="en">
 	<head>
 		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Delicious+Handrawn&display=swap" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css2?family=Gentium+Plus:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
 		<meta name="generator" content={Astro.generator} />
 		<title>Russian Hello World</title>
 	</head>
 	<body>
-		<slot />
+		<header>
+			<div id="site_title"><a href="/">Russian Hello World</a></header></div>
+			<span class="description">Recording my journey of growth in learning Russian.</span>
+		</header>
+		<main>
+			<slot />
+		</main>
+		<footer>
+			<div>© 2025 Russian Hello World</div>
+		</footer>
 	</body>
 </html>
 
 <style>
-	html,
-	body {
-		margin: 0;
-		width: 100%;
-		height: 100%;
+	:root {
+    --font-size-base: clamp(1rem, 0.34vw + 0.91rem, 1.19rem);
+    --font-size-lg: clamp(1.2rem, 0.7vw + 1.2rem, 1.5rem);
+    --font-size-xl: clamp(2.44rem, 2.38vw + 1.85rem, 3.75rem);
+
+    --color-text: hsl(0, 0%, 19%);
+    --color-bg: hsl(0, 0%, 80%);
+    --color-callout: hsl(0, 0%, 55%);
+  }
+
+	html {
+		font-size: var(--font-size-base);
+		font-family: "Gentium Plus", serif;
+		color: var(--color-text);
+		background-color: var(--color-bg);
 	}
+
+	body {
+    margin: auto;
+    padding: 1em;
+    max-width: 80ch;
+  }
+
+	header div#site_title {
+		font-family: "Delicious Handrawn", cursive;
+    font-size: var(--font-size-xl);
+		font-weight: 400;
+    margin-bottom: 5px;
+  }
+
+  header div#site_title a {
+    color: var(--color-text);
+    text-decoration: none;
+  }
+
+	header .description {
+    font-size: 1em;
+  }
+
+  main {
+    margin-top: 50px;
+  }
+
+  footer {
+    margin-top: 80px;
+    margin-bottom: 50px;
+    text-align: center;
+  }
+
+	div.link ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+  }
+
+  div.link li {
+    margin: 0 5px;
+  }
+
+  div.copyright {
+    margin-top: 30px;
+  }
+
+	:global(a) {
+    color: var(--color-text);
+  }
+
+  :global(h1) {
+    font-size: var(--font-size-lg);
+    font-weight: normal;
+  }
+
 </style>
