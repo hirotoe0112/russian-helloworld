@@ -1,8 +1,19 @@
 ---
-import Journals from "../components/Journals.astro";
+import About from "../components/About.astro";
+import RecentJournals from "../components/RecentJournals.astro";
 import Layout from "../layouts/Layout.astro";
 ---
 
 <Layout>
-  <Journals collectionName="journals" />
+  <About />
+  <RecentJournals />
+  <div class="see-all">
+    <a href="/" class="see-all">See All</a>(under construction)
+  </div>
 </Layout>
+
+<style>
+  div.see-all {
+    text-align: right;
+  }
+</style>

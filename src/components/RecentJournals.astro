@@ -7,9 +7,10 @@ const journals = (await getCollection(collectionName)).sort((a, b) => {
   return b.data.pubDate.valueOf() - a.data.pubDate.valueOf();
 });
 ---
+<h2>Learning Journals</h2>
 <ul class="posts">
   {
-    journals.map((post) => (
+    journals.slice(0, 3).map((post) => (
       <li>
         <p class = "date">{dateStringFromDate(post.data.pubDate)}</p>
         <p class="title">
@@ -40,5 +41,9 @@ const journals = (await getCollection(collectionName)).sort((a, b) => {
   ul.posts li p.title {
     margin: 0;
     font-size: var(--font-size-lg);
+  }
+
+  div.see-all {
+    text-align: right;
   }
 </style>
