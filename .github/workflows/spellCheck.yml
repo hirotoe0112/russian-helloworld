@@ -16,7 +16,7 @@ jobs:
         with:
           node-version: '22'
 
-      - name: Build Project
+      - name: Spell Check
         run: |
           npm install
           npm run cspell
