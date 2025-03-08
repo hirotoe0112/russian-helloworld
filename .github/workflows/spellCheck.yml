@@ -1,0 +1,22 @@
+name: Spell Check
+on:
+  push:
+    branches: [master]
+
+jobs:
+  deploy:
+    name: Spell Check
+    runs-on: ubuntu-latest
+    steps:
+      - name: Get latest code
+        uses: actions/checkout@v4
+
+      - name: Use Node.js 22
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+
+      - name: Build Project
+        run: |
+          npm install
+          npm run cspell
