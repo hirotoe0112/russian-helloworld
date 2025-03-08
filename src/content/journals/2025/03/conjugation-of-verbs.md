@@ -46,7 +46,7 @@ I made some original sentences.
 
 They say that Russian words are pronounced as they are spelled. I completely agree with this advantage when pronouncing Russian words. However, when it comes to writing them down, I am not sure whether I should write a or о, as a non-stressed о is pronounced as а.
 
-And writing this article in English. lol.
+And the fact that I am writing this article in English. lol.
 
 ## Strategies to Improve
 <!-- What will you do to overcome today’s challenges? -->
