@@ -19,7 +19,7 @@ Russian | English
 ## Challenges & Difficulties
 <!-- What was difficult today? -->
 
-## Storategies to Improve
+## Strategies to Improve
 <!-- What will you do to overcome today’s challenges? -->
 
 ## Progress & Achievements
