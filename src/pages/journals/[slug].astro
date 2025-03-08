@@ -1,27 +1,42 @@
 ---
+import type { GetStaticPaths } from "astro";
 import Layout from "../../layouts/Layout.astro";
-import { getCollection, getEntry, render } from "astro:content";
+import { getCollection, render } from "astro:content";
+import { dateStringFromDate } from "../../helpers/date-util";
 
-type Journal = {
-  data: {
-    slug: string
-  }
-  collection: string
-}
-
-export async function getStaticPaths() {
-  const journals: Journal[] = await getCollection("journals");
+export const getStaticPaths = (async () => {
+  const journals = await getCollection("journals");
   return journals.map((post) => ({
-    params: { slug: post.data.slug },
-    props: { collection: post.collection }
+    params: { slug: post.slug },
+    props: { post },
   }));
-}
+}) satisfies GetStaticPaths;
 
-const { slug } = Astro.params;
-const { collection } = Astro.props;
-const entry = await getEntry(collection, slug);
-const { Content } = await render(entry);
+const { post } = Astro.props;
+const { Content } = await render(post);
 ---
 <Layout>
+  <div id="date">{dateStringFromDate(post.data.pubDate)}</div>
+  <h1>{post.data.title}</h1>
   <Content />
 </Layout>
+
+<style>
+  h1 {
+    margin-top: 0;
+  }
+
+  div#date {
+    font-style: italic;
+    margin: 0;
+  }
+
+  table th {
+    background-color: var(--color-callout);
+    padding: 8px;
+  }
+
+  table td {
+    padding: 8px;
+  }
+</style>
