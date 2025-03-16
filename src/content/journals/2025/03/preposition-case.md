@@ -26,7 +26,7 @@ pronoun | знать | говорить | жить
 
 Russian | English
 --- | ---
-изчать | to study
+изучать | to study
 в | in
 в Москва | in Moscow
 на | on
