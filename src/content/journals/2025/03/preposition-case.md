@@ -32,7 +32,6 @@ Russian | English
 на | on
 проспект | wide street
 улица | street
-Я знаю | I know
 
 ## Practice & Application
 <!-- How did you practice what you learned? -->
