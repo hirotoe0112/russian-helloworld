@@ -80,4 +80,4 @@ I got dizzy.
 
 Can I really master Russian?
 
-And Russian speakers are so amazing that they can use such confusing grammar rules unconsciously.
+And Russian speakers are so insane that they can use such confusing grammar rules unconsciously.
