@@ -73,7 +73,7 @@ I got dizzy.
 ## Tools & Resources Used
 <!-- List any apps, websites, or books you used today. -->
 
-- Brown, N. J. (1996). <i>The New Penguin Russian Course: A complete course for beginners</i> (Penguin Handbooks ed., pp. 40-45). Penguin Books.
+- Brown, N. J. (1996). <i>The New Penguin Russian Course: A complete course for beginners</i> (Penguin Handbooks ed., pp. 44-51). Penguin Books.
 
 ## Final Thoughts
 <!-- Write anything else that comes to mind about your language learning journey. -->
